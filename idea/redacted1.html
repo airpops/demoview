@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen Buttons</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 5px;
+            width: 100%;
+            height: calc(100% - 20%);
+        }
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
+            border: 2px solid black;
+        }
+        .mapping, .cancel {
+            width: 100%;
+            height: 10%;
+            text-align: center;
+        }
+        .mapping {
+            background-color: #a7d7f9;
+        }
+        .mild { background-color: #ffd700; }
+        .severe { background-color: #ff0000; color: white; }
+        .no { background-color: #00a2ff; color: white; }
+        .moderate { background-color: #ff8c00; }
+        .cancel {
+            background-color: #c0c0c0;
+        }
+    </style>
+    <script>
+        function redirectToChviz() {
+            window.location.href = "redacted2.html";
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".button").forEach(button => {
+                button.addEventListener("click", redirectToChviz);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="button mapping">MAPPING</div>
+    <div class="container">
+        <div class="button mild">MILD DISCOMFORT</div>
+        <div class="button severe">SEVERE DISCOMFORT</div>
+        <div class="button no">NO DISCOMFORT</div>
+        <div class="button moderate">MODERATE DISCOMFORT</div>
+    </div>
+    <div class="button cancel">CANCEL</div>
+</body>
+</html>

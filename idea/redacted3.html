@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: #d3d3d3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .comment-box {
+            width: 900px;
+            padding: 40px;
+            background-color: #666;
+            border-radius: 15px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .entry {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .alert-icon {
+            width: 70px;
+            height: 70px;
+            background-color: red;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        .play-icon {
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: 15px;
+            font-weight: bold;
+            color: black;
+            font-size: 30px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 20px;
+            background-color: green;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function goToTestPage() {
+            window.location.href = "redacted1.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="comment-box">
+        <div class="entry">
+            <div class="alert-icon">!</div>
+            <span>Severe Discomfort @ 16:54:32</span>
+            <div class="play-icon">▶</div>
+            <span>add a comment</span>
+        </div>
+        <div class="entry">
+            <div class="alert-icon">!</div>
+            <span>Severe Discomfort @ 17:12:01</span>
+            <div class="play-icon">▶</div>
+            <span>add a comment</span>
+        </div>
+        <button class="submit-btn" onclick="goToTestPage()">submit</button>
+    </div>
+</body>
+</html>
